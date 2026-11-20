@@ -29,16 +29,11 @@ SOFTWARE.
 - **GDAL**, including the ECW driver source (`frmts/ecw`) that the build
   downloads and compiles: MIT-style licence, see
   <https://github.com/OSGeo/gdal/blob/master/LICENSE.TXT>.
-- **libecwj2 3.3** (ERM ECW JPEG 2000 SDK, 2006), with patches from
-  <https://github.com/rouault/libecwj2-3.3-builds>: downloaded and compiled by
-  the Dockerfile, not stored here. It is under ERM's "ECW JPEG 2000 SDK PUBLIC
-  USE LICENSE AGREEMENT" (included in that repository and copied into built
-  images at `/opt/libecwj2-3.3/`). In short, it covers use with software
-  licensed under a GPL-style licence at no charge to the public, and anyone who
-  receives binaries must also be able to get the complete source and this
-  licence. Other terms apply (no changes to the ECW file format, etc.). If you
-  distribute an image built from this Dockerfile, make sure you comply. This is
-  not legal advice; read the licence yourself. For commercial or server use you
-  may need a licence from Hexagon.
+- **Hexagon ERDAS ECW/JP2 SDK 5.4.0** (Desktop Read-Only Redistributable):
+  proprietary and NOT included in this repository (`binary/` is git-ignored).
+  You must hold the installer under Hexagon's licence yourself. That licence
+  governs use of the SDK and redistribution of `libNCSEcw` (including in any
+  image you build with it), and it does not permit ECW encoding without a key.
+  Do not publish images containing the SDK unless your licence allows it.
 - **ECW** and **ERDAS** are trademarks of Hexagon AB and/or its affiliates.
   This project is not affiliated with or endorsed by Hexagon or OSGeo.
